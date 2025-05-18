@@ -8,13 +8,15 @@ gsap.registerPlugin(useGSAP)
 const Home = () => {
     useGSAP(() => {
         const gtl = gsap.timeline({
+            defaults: {
+                ease: "none"
+            },
             scrollTrigger: {
                 trigger: ".main",
                 start: "top 0",
-                end: "top -150%",
-                scrub: 2,
-                markers: true,
-                pin: true
+                end: "top -=5000",
+                scrub: true,
+                pin: true,
             }
         })
 
@@ -175,12 +177,12 @@ const Home = () => {
     })
 
     return (
-        <div className="bg-[#E6ACCF] overflow-hidden flex justify-center items-center main relative h-screen ">
+        <div className="bg-[#E6ACCF] italic overflow-hidden flex justify-center items-center main relative h-screen ">
             <div className="text font-serif text-center text-[2rem] text-zinc-950 relative z-[999]">
                 An 
-                <span className="uppercase mx-3 font-extrabold">impressive</span> 
+                <span className="uppercase not-italic mx-3 font-extrabold">impressive</span> 
                 gem in the heart of <br />
-                <span className="uppercase mx-3 font-extrabold font-sans">Amsterdam.</span> 
+                <span className="uppercase not-italic mx-3 font-extrabold font-sans">Amsterdam.</span> 
                 Industrial, fresh, innovative <br /> 
                 and the love for detail and history oozes <br />
                 from the walls!
